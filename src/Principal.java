@@ -29,13 +29,13 @@ public class Principal {
 		do {
 			try {
 				valorPago = ler.nextDouble();
-				if(valorPago ==0)
+				if(valorPago <= 0)
 					System.out.println("Esse pagamento não é válido");
 			} catch (Exception e) {
 				System.out.println("Esse pagamento não é válido");
 				ler.nextLine();
 			}
-		}while (valorPago == 0);
+		}while (valorPago <= 0);
 		 
 		System.out.println(caixa.calculaNotasMoedasTroco(valorPago, valorTotal)); 
 	}
